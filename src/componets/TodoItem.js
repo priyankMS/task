@@ -33,7 +33,7 @@ function TodoItem({ todos, deleteTodo, updateTodo }) {
           ) : (
             <div  >
               <div >{todo.text}
-              <span>
+              <span className="todo-buton">
                 <button onClick={() => deleteTodo(todo.id)}>Delete</button>
                 <button onClick={() => {
                     setUpdateMode(true);

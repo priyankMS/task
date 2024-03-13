@@ -9,21 +9,21 @@ import TodoItem from './componets/TodoItem';
 function App() {
   const [todos, setTodos] = useState([]);
 
-  // Function to add a new todo
+  
   function addTodo(todoText) {
     if (todoText.trim() === "") {
-      // Don't add empty string as a todo
+      
       return;
     }
     setTodos([...todos, { id: Date.now(), text: todoText }]);
   }
 
-  // Function to delete a todo
+  
   function deleteTodo(id) {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
 
-  // Function to update a todo
+
   function updateTodo(id, newText) {
     setTodos(
       todos.map((todo) =>
